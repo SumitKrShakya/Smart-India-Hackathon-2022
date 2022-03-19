@@ -81,16 +81,18 @@ textarea {
     border-radius: 10px;
     background-color: rgba(40, 167, 234, 1);
     border: 0px solid black;
-    box-shadow: 5px 5px 5px inset rgba(255, 255, 255, 0.2), -5px -5px 5px inset rgba(0, 0, 0, 0.2);
+    /* box-shadow: 5px 5px 5px inset rgba(255, 255, 255, 0.2), -5px -5px 5px inset rgba(0, 0, 0, 0.2); */
 }
 
 .submit:hover {
-    box-shadow: 5px 5px 5px inset rgba(255, 255, 255, 0.4), -5px -5px 5px inset rgba(0, 0, 0, 0.4);
+    /* box-shadow: 5px 5px 5px inset rgba(255, 255, 255, 0.4), -5px -5px 5px inset rgba(0, 0, 0, 0.4); */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .submit:active {
-    box-shadow: -5px -5px 5px inset rgba(255, 255, 255, 0.4), 5px 5px 5px inset rgba(0, 0, 0, 0.4);
-    background-color: rgb(33, 142, 200);
+    /* box-shadow: -5px -5px 5px inset rgba(255, 255, 255, 0.4), 5px 5px 5px inset rgba(0, 0, 0, 0.4); */
+    box-shadow: inset rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* background-color: rgb(33, 142, 200); */
     color: rgb(195, 195, 195);
 }
 
@@ -104,7 +106,8 @@ textarea {
 .card {
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(20px);
-    box-shadow: 5px 5px 5px inset rgba(255, 255, 255, 0.5), -5px -5px 5px inset rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 5px 5px 5px inset rgba(255, 255, 255, 0.5), -5px -5px 5px inset rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.5); */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .c1 {
