@@ -65,6 +65,8 @@ textarea {
     border-radius: 10px;
     width: 33vw;
     border: 1.5px solid rgba(0, 0, 0, 0.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: ; */
 }
 
 .input-div {
@@ -93,7 +95,9 @@ textarea {
     background-color: rgb(33, 142, 200);
     color: rgb(195, 195, 195);
 }
-
+span{
+    color: red;
+}
 .svgmain {
     position: absolute;
     right: -1.1%;
@@ -104,7 +108,10 @@ textarea {
 .card {
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(20px);
-    box-shadow: 5px 5px 5px inset rgba(255, 255, 255, 0.5), -5px -5px 5px inset rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 5px 5px 5px inset rgba(255, 255, 255, 0.5), -5px -5px 5px inset rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.5);
+     */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
 }
 
 .c1 {
