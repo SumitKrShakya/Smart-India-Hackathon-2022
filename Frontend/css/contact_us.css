@@ -14,10 +14,10 @@ body {
 
 .main-form-card {
     height: 85vh;
-    width: 40vw;
-    margin: 0vh 10vh;
+    max-width: 35rem;
+    margin: 0vh 10px;
     border-radius: 15px;
-    padding: 25px;
+    padding: 2%;
 }
 
 form {
@@ -26,6 +26,10 @@ form {
     align-items: center;
     flex-direction: column;
     height: 100%;
+}
+
+form>div {
+    width: 100%;
 }
 
 .form-heading {
@@ -46,12 +50,13 @@ label {
     display: block;
     font-size: 1.1rem;
     line-height: 2rem;
+    /* width: 50%; */
 }
 
 input {
     background-color: rgba(255, 255, 255, 0.8);
     font-size: 0.9rem;
-    width: 13vw;
+    /* max-width: 20rem; */
     height: 30px;
     border-radius: 10px;
     border: 1.5px solid rgba(0, 0, 0, 0.5);
@@ -59,11 +64,17 @@ input {
     /* margin: 10px; */
 }
 
+.textared-div {
+    /* padding: 5%; */
+    text-align: center;
+}
+
 textarea {
     padding: 15px;
+    /* margin: 0% 5%; */
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    width: 33vw;
+    width: 90%;
     border: 1.5px solid rgba(0, 0, 0, 0.5);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* font-family: ; */
@@ -71,6 +82,13 @@ textarea {
 
 .input-div {
     margin: 10px;
+    width: 40%;
+    /* width: 100%; */
+    /* width: 50%; */
+}
+
+.submit-div {
+    text-align: center;
 }
 
 .submit {
@@ -79,7 +97,7 @@ textarea {
     /* font-weight: bold; */
     color: white;
     height: 40px;
-    width: 300px;
+    /* width: 300px; */
     border-radius: 10px;
     background-color: rgba(40, 167, 234, 1);
     border: 0px solid black;
@@ -198,5 +216,29 @@ span {
     }
     100% {
         transform: translate(0px, 0px)
+    }
+}
+
+@media screen and (max-width: 500px) {
+    textarea {
+        height: 10vw;
+        width: 85%;
+    }
+    .textared-div {
+        margin: 0px 10px;
+    }
+    .form-heading {
+        font-size: 1.8rem;
+        font-weight: bolder;
+    }
+    .input-div {
+        width: 100%;
+        margin: 0px 10px;
+    }
+    input,
+    label {
+        width: 90%;
+        display: block;
+        font-size: 1rem;
     }
 }
