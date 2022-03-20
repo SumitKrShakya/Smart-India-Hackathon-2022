@@ -97,9 +97,11 @@ textarea {
     /* background-color: rgb(33, 142, 200); */
     color: rgb(195, 195, 195);
 }
-span{
+
+span {
     color: red;
 }
+
 .svgmain {
     position: absolute;
     right: -1.1%;
@@ -110,15 +112,8 @@ span{
 .card {
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(20px);
-<<<<<<< HEAD
-    /* box-shadow: 5px 5px 5px inset rgba(255, 255, 255, 0.5), -5px -5px 5px inset rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.5);
-     */
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-=======
     /* box-shadow: 5px 5px 5px inset rgba(255, 255, 255, 0.5), -5px -5px 5px inset rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.5); */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
->>>>>>> 0808dee59ddf56fb4fd66effd9294cea7e53a3ee
 }
 
 .c1 {
