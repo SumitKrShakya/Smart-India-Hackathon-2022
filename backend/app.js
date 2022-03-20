@@ -4,6 +4,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const app = express();
 const crypto = require("crypto");
+const videoRouter = require("./routes/video");
 app.use(cors({
     origin : "*"
 }));
@@ -22,13 +23,11 @@ app.use(multer({
     storage:storage
 }).single("video"));
 
-app.post("/storeRecording",(req,res,next) => {
-    let { recordingId } = req.body;
-    console.log(recordingId);
-    console.log(req.file);
-    return res.status(200).json({
-        message : "recording saved"
-    });
-})
+app.use(videoRouter);
 
-app.listen(8080);
+mongoose.connect()
+.then(() => {
+    app.listen(8080);
+}).catch(err => {
+    console.log(err);
+})
