@@ -9,7 +9,7 @@
 
 .m3-step2 {
     /* transform: translateX(300px); */
-    animation: temp1 1s forwards ease;
+    /* animation: temp1 1s forwards ease; */
     opacity: 0;
     transform: translate(-500px, 0px);
     background-color: yellow;
