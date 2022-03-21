@@ -32,3 +32,62 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.navbar {
+    width: 100vw;
+    height: 20vh;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    flex: 1;
+    /* background-color: blue; */
+    margin: 0% 1%;
+}
+
+.navbar_list {
+    flex: 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    /* justify-content: space-evenly; */
+}
+
+.How_it_works {
+    /* background-color:red ; */
+    margin: 0% 2%;
+}
+
+.About {
+    /* background-color:blue ; */
+    margin: 0% 2%;
+}
+
+.contact {
+    /* background-color:blueviolet ; */
+    margin: 0% 2%;
+}
+
+.login {
+    flex: 1;
+    /* background-color: rgb(196, 241, 255); */
+    height: 50%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.login_btn {
+    background-color: rgb(196, 241, 255);
+    /* background-color: rgb(156, 98, 26); */
+    height: 60%;
+    width: 5rem;
+    text-align: center;
+    border-radius: 10px;
+}
