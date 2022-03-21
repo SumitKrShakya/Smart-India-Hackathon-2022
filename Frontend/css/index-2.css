@@ -8,6 +8,10 @@
 }
 
 .m3-step2 {
+    /* transform: translateX(300px); */
+    animation: temp1 1s forwards ease;
+    opacity: 0;
+    transform: translate(-500px, 0px);
     background-color: yellow;
 }
 
@@ -29,4 +33,23 @@
 
 .m3-step7 {
     background-color: lightgreen;
+}
+
+.ani {
+    animation: temp1 1s forwards ease;
+}
+
+@keyframes temp1 {
+    0% {
+        opacity: 0;
+        transform: translate(-500px, 0px);
+    }
+    90% {
+        opacity: 0.9;
+        transform: translate(50px, 0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
 }
