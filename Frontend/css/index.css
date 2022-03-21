@@ -46,6 +46,8 @@ body {
 .logo {
     flex: 1;
     /* background-color: blue; */
+    font-size: 2rem;
+    font-weight: 900;
     margin: 0% 1%;
 }
 
