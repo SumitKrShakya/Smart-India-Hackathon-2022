@@ -106,7 +106,7 @@ a{
     /* top: 50rem;*/
 }
 .member{
-    width: 75rem;
+    width: 75%;
     height: 42rem;
     margin:27rem 0rem 20rem  0rem;
     /* padding-top: 10rem; */
@@ -115,7 +115,7 @@ a{
     flex-direction:column;
     justify-content: space-around;
     align-items: center;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     position: absolute;
     z-index: 5;
 
