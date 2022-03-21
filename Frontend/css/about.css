@@ -101,23 +101,85 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 100vw; */
-    /* height: 100vh; */
-    /* top: 50rem; */
+    width: 100vw; 
+    height: 100vh;
+    /* top: 50rem;*/
 }
 .member{
+    width: 75rem;
+    height: 42rem;
+    margin:27rem 0rem 20rem  0rem;
+    /* padding-top: 10rem; */
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    /* flex-wrap: wrap; */
     position: absolute;
     z-index: 5;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    top: 10rem;
-    /* left: 0rem; */
-    bottom: 5rem;
-    /* width: 90rem; */
-    height: 40rem;
+
     /* background-color: blueviolet; */
     border-radius: 10px;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.first-member-box-line{
+    display: flex;
+    flex-direction: row;
+}
+.second-member-box-line{
+    display: flex;
+    flex-direction: row;
+}
+.member-box{
+    width: 14rem;
+    height: 20rem;
+    padding: 0rem 1rem ;
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    font-size: small;
+    /* margin: 1rem 0rem; */
+    /* background-color: #0099ff; */
+    /* background-color:red; */
+    /* border-radius: 5px; */
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+
+}
+.member-photo{
+    width: 15rem;
+    height: 12rem;
+}
+.member-photo>img{
+
+    width: 14rem;
+    height: 12rem;
+
+}
+.detail{
+    width: 14rem;
+    height: 8rem;
+    /* background-color: #0099ff; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+
+}
+.member-name{
+    width: 14rem;
+    height: 2rem;
+    /* line-height: px;
+     */
+    /* padding-top: 7px; */
+    /* margin-top: 1rem; */
+    /* background-color: bisque; */
+    text-align: center;
+}
+.member-descrip{
+    width: 13rem;
+    height: 6rem;
+    /* background-color: green; */
+    padding:1px 8px ;
+    text-align: center;
+
 }
