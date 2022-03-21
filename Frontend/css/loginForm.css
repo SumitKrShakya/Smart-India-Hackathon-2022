@@ -1,0 +1,149 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Muli:wght@300&display=swap"); */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Mochiy Pop P One', sans-serif;
+  font-family: 'Varela Round', sans-serif;
+}
+
+body {
+  /* background-color: steelblue; */
+  color: #0099ff;
+  font-family: "Muli", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.container-parent{
+  margin-top: 3rem;
+  width: 50rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 10rem;
+}
+.svgDiv{
+  width: 25rem;
+  height: 30rem;
+  /* position: absolute; */
+  /* z-index: -5; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(2.1);
+}
+.svgDiv>svg{
+  width: 45%;
+  height: 45%;
+}
+.container {
+  /* width: 50%;
+  height: 30%; */
+  background-color: rgba(255, 255, 255, 0.753);
+  padding: 20px 40px;
+  border-radius: 5px;
+  
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container a {
+  text-decoration: none;
+  color: #0099ff;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background: #ffffff;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: 0;
+  border-radius: 5px;
+  color: #0099ff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.text {
+  margin-top: 30px;
+  color: rgba(36, 35, 35, 0.76);
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  /* background-color: transparent; */
+  border: 0;
+  border-bottom: 2px solid #0099ff;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #0099ff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: #0099ff
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: #0099ff;
+  transform: translateY(-30px);
+}
+
+.footer-wave{
+  /* transform: scale(2); */
+  /* transform: translate(10px,1rem); */
+  bottom: 0;
+  z-index: -6;
+  position: absolute;
+  /* height: 30rem; */
+  transform: scaleX(10);
+  /* transform: translate(0px,0px); */
+
+  /* transform: scaleY(5); */
+}

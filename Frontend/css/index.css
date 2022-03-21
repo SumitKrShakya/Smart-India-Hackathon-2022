@@ -225,5 +225,18 @@ a {
     /* background-color: #1200b3; */
 
 }
+footer{
+    width: 100vw;
+    height: 30rem;
+    /* background-color: aqua */
+}
+footer>svg{
+    transform: translate(0px,5px);
+}
+.filler_footer{
+    /* width: ; */
+    height:15.5rem ;
+    background: #0099ff;
 
+}
 
