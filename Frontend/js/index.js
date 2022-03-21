@@ -5,19 +5,25 @@ console.log(m3_desc)
 const options = {
     root: null,
     threshold: 0,
-    rootMargin: "-150px 500px"
+    rootMargin: "-50px 0px -150px 0px"
 }
 console.log('asd')
 const observer = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
-        console.log('s' + entry.target.dataset.stepnumber + '-svg')
         if (entry.isIntersecting) {
-            // console.log("StepNumber", entry.target.dataset.stepnumber)
             document.getElementById('s' + entry.target.dataset.stepnumber + '-svg').classList.add("ani-svg")
-            entry.target.classList.add("ani");
+            if (parseInt(entry.target.dataset.stepnumber) % 2 == 0) {
+                entry.target.classList.add("ani-r");
+            } else {
+                entry.target.classList.add("ani-l");
+            }
         } else {
             document.getElementById('s' + entry.target.dataset.stepnumber + '-svg').classList.remove("ani-svg")
-            entry.target.classList.remove("ani");
+            if (parseInt(entry.target.dataset.stepnumber) % 2 == 0) {
+                entry.target.classList.remove("ani-r");
+            } else {
+                entry.target.classList.remove("ani-l");
+            }
         }
     })
 }, options)
