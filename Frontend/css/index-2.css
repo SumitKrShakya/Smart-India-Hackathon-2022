@@ -1,0 +1,32 @@
+.m3-steps {
+    height: 100vh;
+    width: 100vw;
+}
+
+.m3-step1 {
+    background-color: red;
+}
+
+.m3-step2 {
+    background-color: yellow;
+}
+
+.m3-step3 {
+    background-color: orange;
+}
+
+.m3-step4 {
+    background-color: cyan;
+}
+
+.m3-step5 {
+    background-color: lightgrey;
+}
+
+.m3-step6 {
+    background-color: plum;
+}
+
+.m3-step7 {
+    background-color: lightgreen;
+}
