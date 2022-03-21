@@ -130,7 +130,7 @@ a {
 }
 
 .login_btn {
-    background-color: rgb(196, 241, 255);
+    background-color: rgb(255, 255, 255);
     /* background-color: rgb(156, 98, 26); */
     height: 2.2rem;
     width: 5rem;
@@ -138,3 +138,92 @@ a {
     text-align: center;
     border-radius: 10px;
 }
+
+                /* main 2 view */
+
+.main2{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #b30000; */
+    display: flex;
+
+}
+#main2_id{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+.m2_left{
+    width: 40%;
+    height: 100%;  
+    /* background-color: #00b31e; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+}
+.tiltedwraper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.6s ease-out;
+    perspective: 1000px;
+}
+.tiltedwraper:hover{
+    transition: all 0.3s linear;
+    transform: scale(1.1);
+
+}
+.tilt-box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: all 0.6s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(0deg) rotateY(0deg);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+.t-hover{
+    width: 33.333%;
+    height: 33.333%;
+    position: absolute;
+    z-index: 1;
+}
+.t-hover:nth-child(1){ left: 0; top: 0;}
+.t-hover:nth-child(2){ left: 33.333%; top: 0;}
+.t-hover:nth-child(3){ left: 66.666%; top: 0;}
+.t-hover:nth-child(4){ left: 0; top: 33.333%;}
+.t-hover:nth-child(5){ left: 33.333%; top: 33.333%;}
+.t-hover:nth-child(6){ left: 66.666%; top: 33.333%;}
+.t-hover:nth-child(7){ left: 0; top: 66.666%;}
+.t-hover:nth-child(8){ left: 33.333%; top: 66.666%;}
+.t-hover:nth-child(9){ left: 66.666%; top: 66.666%;}
+
+.t-hover:nth-child(1):hover ~.tilt-box{ transform: rotateX(-20deg) rotateY(20deg)}
+.t-hover:nth-child(2):hover ~.tilt-box{ transform: rotateX(-20deg) rotateY(0deg)}
+.t-hover:nth-child(3):hover ~.tilt-box{ transform: rotateX(-20deg) rotateY(-20deg)}
+.t-hover:nth-child(4):hover ~.tilt-box{ transform: rotateX(0deg) rotateY(20deg)}
+.t-hover:nth-child(5):hover ~.tilt-box{ transform: rotateX(0deg) rotateY(0deg)}
+.t-hover:nth-child(6):hover ~.tilt-box{ transform: rotateX(0deg) rotateY(-20deg)}
+.t-hover:nth-child(7):hover ~.tilt-box{ transform: rotateX(20deg) rotateY(20deg)}
+.t-hover:nth-child(8):hover ~.tilt-box{ transform: rotateX(20deg) rotateY(0deg)}
+.t-hover:nth-child(9):hover ~.tilt-box{ transform: rotateX(20deg) rotateY(-20deg)}
+.m2_right{
+    width: 60%;
+    height: 100%; 
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: bold;
+    /* background-color: #1200b3; */
+
+}
+
+
