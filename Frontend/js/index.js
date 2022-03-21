@@ -1,19 +1,27 @@
-const section1 = document.getElementById('m3-s2')
-
+// const section1 = document.getElementById('m3-s2')
+const m3_desc = document.querySelectorAll('.s-content')
+const m3_svg = document.querySelectorAll('.s-svg')
+console.log(m3_desc)
 const options = {
     root: null,
     threshold: 0,
-    rootMargin: "-150px"
+    rootMargin: "-150px 500px"
 }
-
+console.log('asd')
 const observer = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
+        console.log('s' + entry.target.dataset.stepnumber + '-svg')
         if (entry.isIntersecting) {
-            section1.classList.add("ani");
+            // console.log("StepNumber", entry.target.dataset.stepnumber)
+            document.getElementById('s' + entry.target.dataset.stepnumber + '-svg').classList.add("ani-svg")
+            entry.target.classList.add("ani");
         } else {
-            section1.classList.remove("ani");
+            document.getElementById('s' + entry.target.dataset.stepnumber + '-svg').classList.remove("ani-svg")
+            entry.target.classList.remove("ani");
         }
     })
 }, options)
 
-observer.observe(section1)
+m3_desc.forEach(description => {
+    observer.observe(description)
+})
