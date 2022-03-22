@@ -1,7 +1,46 @@
 // const section1 = document.getElementById('m3-s2')
 const m3_desc = document.querySelectorAll('.s-content')
 const m3_svg = document.querySelectorAll('.s-svg')
-console.log(m3_desc)
+
+
+
+
+const car = document.getElementById('line-car')
+const allArrow = document.querySelectorAll('.arrow')
+let stepsArrow = [0, 0, 0, 0, 0, 0, 0]
+let stepsStopper = false;
+window.onscroll = () => {
+    if (stepsStopper) {
+        return;
+    }
+
+    if (stepsArrow[stepsArrow.length - 1] != 0) {
+        stepsStopper = true;
+    }
+
+    for (let i = 0; i < allArrow.length; i++) {
+        // console.log("heeey", allArrow[i])
+        if (!allArrow[i].classList.contains('animat')) {
+            let temp = (Math.round(allArrow[i].getBoundingClientRect().top) - Math.round(car.getBoundingClientRect().bottom))
+            if (temp <= 40) {
+                allArrow[i].classList.add('animat');
+                allArrow[i].children[0].classList.add('circle-animation')
+                allArrow[i].children[0].children[0].classList.add('circle-animation')
+                allArrow[i].children[0].children[0].children[0].classList.add('circle-animation')
+                console.log("child", allArrow[i].children[0].children)
+            }
+        }
+    }
+
+    // const tt = document.querySelector('.arrow');
+    // console.log(Math.round(car.getBoundingClientRect().bottom), Math.round(tt.getBoundingClientRect().bottom))
+    // let temp = (Math.round(tt.getBoundingClientRect().top) - Math.round(car.getBoundingClientRect().bottom))
+    // console.log("temp", temp)
+    // if (temp <= 40) {
+    //     tt.classList.add('animat');
+    // }
+}
+
 const options = {
     root: null,
     threshold: 0,
