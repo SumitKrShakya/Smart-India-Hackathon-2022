@@ -24,6 +24,7 @@
 }
 
 .m3-steps {
+    font-size: 1.2rem;
     height: 100vh;
     width: 100%;
 }
@@ -75,25 +76,16 @@
 
 .ani-r {
     animation: slide-in-description-r 0.5s forwards ease;
+    transform: translate(500px, 0px);
 }
 
 .ani-svg {
     animation: slide-in-svg 0.5s forwards ease;
 }
 
-
-/* 
-.ani-r-l {
-    animation: slide-in-description-l 0.5s forwards ease;
+.ani-svg-r {
+    animation: slide-in-svg reverse 0.5s forwards ease;
 }
-
-.ani-r-r {
-    animation: slide-in-description-r 0.5s forwards ease;
-}
-
-.ani-r-svg {
-    animation: slide-in-svg 0.5s forwards ease;
-} */
 
 @keyframes slide-in-description-l {
     0% {

@@ -5,7 +5,7 @@ console.log(m3_desc)
 const options = {
     root: null,
     threshold: 0,
-    rootMargin: "-50px 0px -150px 0px"
+    rootMargin: "500px 0px -150px 0px"
 }
 console.log('asd')
 const observer = new IntersectionObserver(function(entries, observer) {
@@ -18,6 +18,34 @@ const observer = new IntersectionObserver(function(entries, observer) {
                 entry.target.classList.add("ani-l");
             }
         } else {
+            entry.
+            document.getElementById('s' + entry.target.dataset.stepnumber + '-svg').classList.remove("ani-svg")
+            if (parseInt(entry.target.dataset.stepnumber) % 2 == 0) {
+                entry.target.classList.remove("ani-r");
+            } else {
+                entry.target.classList.remove("ani-l");
+            }
+        }
+    })
+}, options)
+
+m3_desc.forEach(description => {
+    observer.observe(description)
+})
+
+
+// --------------------------------------
+const observerRemove = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            document.getElementById('s' + entry.target.dataset.stepnumber + '-svg').classList.add("ani-svg")
+            if (parseInt(entry.target.dataset.stepnumber) % 2 == 0) {
+                entry.target.classList.add("ani-r");
+            } else {
+                entry.target.classList.add("ani-l");
+            }
+        } else {
+            entry.
             document.getElementById('s' + entry.target.dataset.stepnumber + '-svg').classList.remove("ani-svg")
             if (parseInt(entry.target.dataset.stepnumber) % 2 == 0) {
                 entry.target.classList.remove("ani-r");
