@@ -1,0 +1,244 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    /* background-image: url("/Frontend/images/temp.jpg"); */
+    background-size: cover;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.main-form-card {
+    height: 85vh;
+    max-width: 35rem;
+    margin: 0vh 10px;
+    border-radius: 15px;
+    padding: 2%;
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+form>div {
+    width: 100%;
+}
+
+.form-heading {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.input-1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+input,
+label {
+    display: block;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    /* width: 50%; */
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    /* max-width: 20rem; */
+    height: 30px;
+    border-radius: 10px;
+    border: 1.5px solid rgba(0, 0, 0, 0.5);
+    padding: 0px 15px;
+    /* margin: 10px; */
+}
+
+.textared-div {
+    /* padding: 5%; */
+    text-align: center;
+}
+
+textarea {
+    padding: 15px;
+    /* margin: 0% 5%; */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    width: 90%;
+    border: 1.5px solid rgba(0, 0, 0, 0.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: ; */
+}
+
+.input-div {
+    margin: 10px;
+    width: 40%;
+    /* width: 100%; */
+    /* width: 50%; */
+}
+
+.submit-div {
+    text-align: center;
+}
+
+.submit {
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.8);
+    /* font-weight: bold; */
+    color: white;
+    height: 40px;
+    /* width: 300px; */
+    border-radius: 10px;
+    background-color: rgba(40, 167, 234, 1);
+    border: 0px solid black;
+    /* box-shadow: 5px 5px 5px inset rgba(255, 255, 255, 0.2), -5px -5px 5px inset rgba(0, 0, 0, 0.2); */
+}
+
+.submit:hover {
+    /* box-shadow: 5px 5px 5px inset rgba(255, 255, 255, 0.4), -5px -5px 5px inset rgba(0, 0, 0, 0.4); */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.submit:active {
+    /* box-shadow: -5px -5px 5px inset rgba(255, 255, 255, 0.4), 5px 5px 5px inset rgba(0, 0, 0, 0.4); */
+    box-shadow: inset rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* background-color: rgb(33, 142, 200); */
+    color: rgb(195, 195, 195);
+}
+
+span {
+    color: red;
+}
+
+.svgmain {
+    position: absolute;
+    right: -1.1%;
+    bottom: -1.79%;
+    transform: scale(1.1) translate(0px, -20px);
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    /* box-shadow: 5px 5px 5px inset rgba(255, 255, 255, 0.5), -5px -5px 5px inset rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.5); */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.c1 {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(40, 167, 234, 1);
+    animation: circle-animation 7s ease infinite;
+    position: absolute;
+    z-index: -1;
+}
+
+.c2 {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.svg-a-1 {
+    animation: svg1-animation 3s ease infinite;
+}
+
+.svg-a-2 {
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: svg1-animation 3s 1s ease infinite;
+}
+
+.svg-a-3 {
+    animation: svg1-animation 3s 2s ease infinite;
+}
+
+.svg-a-4 {
+    animation: svg4-animation 3s 0s ease infinite;
+}
+
+.svg-a-5 {
+    animation: svg4-animation 3s 0.75s ease infinite;
+}
+
+.svg-a-6 {
+    animation: svg4-animation 3s 1.45s ease infinite;
+}
+
+.svg-a-7 {
+    animation: svg4-animation 3s 2s ease infinite;
+}
+
+@keyframes circle-animation {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(0px, 100px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes svg1-animation {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(0px, 20px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes svg4-animation {
+    0% {
+        transform: translate(0px, 0px)
+    }
+    50% {
+        transform: translate(5px, 0px)
+    }
+    100% {
+        transform: translate(0px, 0px)
+    }
+}
+
+@media screen and (max-width: 500px) {
+    textarea {
+        height: 10vw;
+        width: 85%;
+    }
+    .textared-div {
+        margin: 0px 10px;
+    }
+    .form-heading {
+        font-size: 1.8rem;
+        font-weight: bolder;
+    }
+    .input-div {
+        width: 100%;
+        margin: 0px 10px;
+    }
+    input,
+    label {
+        width: 90%;
+        display: block;
+        font-size: 1rem;
+    }
+}
