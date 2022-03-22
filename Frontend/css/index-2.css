@@ -15,9 +15,11 @@
 }
 
 .m3-line {
-    background-color: rgb(230, 173, 173);
+    background-color: #0099ff;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
     flex: 1;
-    width: 15px;
+    width: 8px;
 }
 
 .m3-right {
@@ -93,7 +95,7 @@
         opacity: 0;
         transform: translate(-500px, 0px);
     }
-    90% {
+    80% {
         opacity: 0.9;
         transform: translate(50px, 0px);
     }
@@ -108,7 +110,7 @@
         opacity: 0;
         transform: translate(500px, 0px);
     }
-    90% {
+    80% {
         opacity: 0.9;
         transform: translate(-50px, 0px);
     }
@@ -123,7 +125,7 @@
         opacity: 0;
         transform: scale(0);
     }
-    90% {
+    80% {
         opacity: 0.9;
         transform: scale(1.2);
     }
@@ -136,7 +138,94 @@
 .m3-line>img {
     /* position: absolute; */
     position: sticky;
-    top: 50vh;
+    top: 35vh;
     transform: translateX(-50%);
     /* transform: scale(0.3); */
 }
+
+.m3-step1 {
+    position: relative;
+}
+
+.m3-step1>.arrow {
+    position: absolute;
+    /* position: relative; */
+    top: 50%;
+    right: 0;
+    width: 0px;
+    height: 6px;
+    animation: arrow-grow 0.5s ease-in-out forwards;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    background-color: #0099ff;
+}
+
+@keyframes arrow-grow {
+    0% {
+        width: 0px;
+    }
+    80% {
+        width: 120px;
+    }
+    100% {
+        width: 100px;
+    }
+}
+
+.arrow>img {
+    height: 40px;
+    position: absolute;
+    top: -17px;
+    left: -10px;
+    /* right: 0px;s */
+    transform: scaleX(-1);
+    filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.4));
+}
+
+.cir {
+    border-radius: 100%;
+    animation: cir-grow 0.5s forwards ease-in-out;
+}
+
+@keyframes cir-grow {
+    0% {
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.circ1-l {
+    position: absolute;
+    right: -56px;
+    top: -49px;
+    height: 99px;
+    width: 99px;
+    background-color: hsl(204, 100%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.circ2-l {
+    height: 66px;
+    background-color: hsl(204, 100%, 55%);
+    width: 66px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    align-items: center;
+}
+
+.circ3-l {
+    height: 33px;
+    width: 33px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    background-color: hsl(204, 100%, 60%);
+}
+
+.arrow-stick {}
