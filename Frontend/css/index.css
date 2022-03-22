@@ -231,7 +231,8 @@ footer{
     /* background-color: aqua */
 }
 footer>svg{
-    transform: translate(0px,5px);
+    transform: translate(0px,20px);
+    /* transform: scaleX(1.1); */
 }
 .filler_footer{
     /* width: ; */

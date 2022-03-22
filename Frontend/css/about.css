@@ -127,13 +127,14 @@ a{
 .first-member-box-line{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 .second-member-box-line{
     display: flex;
     flex-direction: row;
 }
 .member-box{
-    width: 14rem;
+    width: 14%;
     height: 20rem;
     padding: 0rem 1rem ;
     font-family: 'Dosis', sans-serif;
