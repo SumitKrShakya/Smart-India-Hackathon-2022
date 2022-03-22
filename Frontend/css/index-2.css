@@ -136,7 +136,7 @@
 .m3-line>img {
     /* position: absolute; */
     position: sticky;
-    top: 50vh;
+    top: 35vh;
     transform: translateX(-50%);
     /* transform: scale(0.3); */
 }
