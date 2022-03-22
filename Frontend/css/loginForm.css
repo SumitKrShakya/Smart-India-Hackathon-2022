@@ -38,9 +38,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: scale(2.1);
 }
 .svgDiv>svg{
+  padding-right: 5px;
+  transform: scale(2.1);
   width: 45%;
   height: 45%;
 }
