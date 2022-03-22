@@ -17,6 +17,7 @@
 .m3-line {
     background-color: rgb(230, 173, 173);
     flex: 1;
+    width: 15px;
 }
 
 .m3-right {
@@ -130,4 +131,12 @@
         opacity: 1;
         transform: scale(1);
     }
+}
+
+.m3-line>img {
+    /* position: absolute; */
+    position: sticky;
+    top: 50vh;
+    transform: translateX(-50%);
+    /* transform: scale(0.3); */
 }
