@@ -30,10 +30,14 @@ body{
 }
 .dash_left{
     flex: 1;
-    background-color: rgb(33, 33, 148);
+    border-radius: 5px;
+
+    background-color: #02225ccc;
     display: flex;
     flex-direction: column;
     color: white;
+    /* backdrop-filter: blur(20px); */
+
     /* height: 100%; */
 }
 .dash_header{
@@ -47,7 +51,7 @@ body{
 }
 .dashboard_name{
     flex: 1;
-    font-size: 2rem;
+    font-size: 150%;
     padding-top: 10px;
     text-align: center;
 }
@@ -70,9 +74,41 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.camera{
+    margin-top: 9px;
+    color: white;
+    text-align: center;
+    flex: 4;
+    width:80%;
+    height: 70%;
+    background-color: rgb(36, 35, 35);
+    border-radius: 5px;
+}
+.camera>img{
+    width: 100%;
+    height: 100%;
+}
+.cam_control{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex: 2;
+    width:80%;
+    height: 20%;
+    background-color: rgb(4, 156, 55);
 }
 .dash_right{
     flex: 1;
-    background-color: brown;
+    border-radius: 5px;
+    /* background-color: #035280; */
+    color: white;
+    /* background-color: #0099f0cc; */
+    background-color: #02225ccc;
+
+
+
+    /* background-color: brown; */
     /* height: 100%; */
 }
