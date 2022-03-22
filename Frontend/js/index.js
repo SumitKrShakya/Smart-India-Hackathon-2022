@@ -20,7 +20,6 @@ const observer = new IntersectionObserver(function(entries, observer) {
         }
 
         // } else {
-        //     entry.
         //     document.getElementById('s' + entry.target.dataset.stepnumber + '-svg').classList.remove("ani-svg")
         //     if (parseInt(entry.target.dataset.stepnumber) % 2 == 0) {
         //         entry.target.classList.remove("ani-r");
