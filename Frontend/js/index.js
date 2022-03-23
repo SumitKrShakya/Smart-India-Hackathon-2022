@@ -27,7 +27,7 @@ window.onscroll = () => {
                 allArrow[i].children[0].classList.add('circle-animation')
                 allArrow[i].children[0].children[0].classList.add('circle-animation')
                 allArrow[i].children[0].children[0].children[0].classList.add('circle-animation')
-                console.log("child", allArrow[i].children[0].children)
+                    // console.log("child", allArrow[i].children[0].children)
             }
         }
     }
@@ -42,11 +42,11 @@ window.onscroll = () => {
 }
 
 const options = {
-    root: null,
-    threshold: 0,
-    rootMargin: "500px 0px -150px 0px"
-}
-console.log('asd')
+        root: null,
+        threshold: 0,
+        rootMargin: "500px 0px -150px 0px"
+    }
+    // console.log('asd')
 const observer = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
