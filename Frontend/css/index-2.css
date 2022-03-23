@@ -227,6 +227,7 @@
 }
 
 .circ1-l {
+    /* box-shadow: ; */
     position: absolute;
     top: -49px;
     height: 99px;
