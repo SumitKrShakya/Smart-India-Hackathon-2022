@@ -139,8 +139,28 @@
     /* position: absolute; */
     position: sticky;
     top: 35vh;
-    transform: translateX(-50%);
+    /* transform: translate(-50%, 0%); */
     /* transform: scale(0.3); */
+    transform: translate(30vw, -50vh) rotate(90deg);
+}
+
+.m3-line>.car-prev {
+    animation: car-prev-animaton 3s ease forwards;
+}
+
+@keyframes car-prev-animaton {
+    0% {
+        transform: translate(30vw, -50vh) rotate(90deg);
+    }
+    45% {
+        transform: translate(-50%, -50vh) rotate(90deg);
+    }
+    55% {
+        transform: translate(-50%, -50vh) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, 0vh) rotate(0deg);
+    }
 }
 
 .m3-steps {
