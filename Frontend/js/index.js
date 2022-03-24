@@ -10,6 +10,7 @@ const allArrow = document.querySelectorAll('.arrow')
 let stepsArrow = [0, 0, 0, 0, 0, 0, 0]
 let stepsStopper = false;
 window.onscroll = () => {
+    car_mover_starter();
     if (stepsStopper) {
         return;
     }
@@ -32,6 +33,7 @@ window.onscroll = () => {
         }
     }
 
+
     // const tt = document.querySelector('.arrow');
     // console.log(Math.round(car.getBoundingClientRect().bottom), Math.round(tt.getBoundingClientRect().bottom))
     // let temp = (Math.round(tt.getBoundingClientRect().top) - Math.round(car.getBoundingClientRect().bottom))
@@ -39,6 +41,22 @@ window.onscroll = () => {
     // if (temp <= 40) {
     //     tt.classList.add('animat');
     // }
+}
+let car_returner = false
+
+function car_mover_starter() {
+    if (car_returner) {
+        return
+    }
+    let car_start = document.querySelector('.m2_right')
+    let temp = car_start.getBoundingClientRect().top
+    let car_animaton_starter = document.getElementById("line-car")
+    console.log(temp)
+    if (temp <= 20) {
+        console.log("trigger")
+        car_animaton_starter.classList.add('car-prev')
+        car_returner = true
+    }
 }
 
 const options = {
