@@ -142,18 +142,58 @@ a {
 }
 
 .member-p {
-    position: absolute;
-    z-index: 10;
+    /* position: absolute;
+    z-index: 10; */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
     /* top: 50rem;*/
 }
+.member-p-child{
+    /* background-color: black; */
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-.member {
     width: 75%;
+}
+.tabs{
+    /* background-color: black; */
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+}
+.about_tab{
+    background-color: #0099ff;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+.team_tab{
+    background-color: #ffff;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+.member {
+    width: 100%;
     /* height: 42rem; */
     height: 85vh;
     /* margin: 27rem 0rem 20rem 0rem; */
@@ -167,10 +207,31 @@ a {
     /* position: absolute; */
     /* z-index: 5; */
     /* background-color: blueviolet; */
-    border-radius: 10px;
+    /* border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    overflow: scroll;
+}
+.content_description{
+    width: 100%;
+    /* height: 42rem; */
+    height: 85vh;
+    /* margin: 27rem 0rem 20rem 0rem; */
+    /* padding-top: 10rem; */
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    /* position: absolute; */
+    /* z-index: 5; */
+    /* background-color: blueviolet; */
+    /* border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
     overflow: scroll;
 }
 
@@ -208,6 +269,7 @@ a {
     height: 12rem; */
     /* width: 100%;
     height: 100%; */
+    height: 90%;
     flex: 7;
 }
 
@@ -216,14 +278,16 @@ a {
     /* width: 14rem;
     height: 12rem; */
     width: 100%;
+    height: 100%;
 }
+
 
 .detail {
     /* width: 14rem; */
     width: 100%;
     padding: 3%;
     /* height: 8rem; */
-    /* background-color: #0099ff; */
+    background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 5px;
 }
