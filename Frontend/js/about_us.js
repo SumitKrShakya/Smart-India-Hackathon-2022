@@ -30,7 +30,7 @@ function tabClicked(tab) {
 
 let ourTeam_content = `<div class="member-box">
 <div class="member-photo">
-    <img src="../images/shivamm.JPG" alt="image">
+    <img src="../svg/shivam.svg" alt="image">
 </div>
 <div class="detail">
 
