@@ -32,7 +32,9 @@ body{
     flex: 1;
     border-radius: 5px;
 
-    background-color: #02225ccc;
+    /* background-color: #02225ccc; */
+    background-color: #0099f0cc;
+
     display: flex;
     flex-direction: column;
     color: white;
@@ -109,7 +111,7 @@ body{
     /* background-color: #035280; */
     color: white;
     /* background-color: #0099f0cc; */
-    background-color: #02225ccc;
+    background-color: #0099f0cc;
 
 
 
