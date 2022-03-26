@@ -155,7 +155,7 @@ a {
 .member {
     width: 75%;
     /* height: 42rem; */
-    height: 85vh;
+    height: 95vh;
     /* margin: 27rem 0rem 20rem 0rem; */
     /* padding-top: 10rem; */
     display: flex;
@@ -170,7 +170,8 @@ a {
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     overflow: scroll;
 }
 
@@ -226,6 +227,8 @@ a {
     /* background-color: #0099ff; */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(200px);
 }
 
 .member-name {
