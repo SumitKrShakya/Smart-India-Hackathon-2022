@@ -15,7 +15,7 @@ body {
 .main-form-card {
     height: 85vh;
     max-width: 35rem;
-    margin: 0vh 10px;
+    margin: 0vh 5vw 0vh 10vw;
     border-radius: 15px;
     padding: 2%;
 }
@@ -144,6 +144,7 @@ span {
     background-color: rgba(40, 167, 234, 1);
     animation: circle-animation 7s ease infinite;
     position: absolute;
+    left: 3vw;
     z-index: -1;
 }
 
@@ -240,5 +241,14 @@ span {
         width: 90%;
         display: block;
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .c1 {
+        left: -5vw;
+    }
+    .main-form-card {
+        margin: 0px 10px;
     }
 }
