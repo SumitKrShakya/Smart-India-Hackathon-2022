@@ -23,6 +23,10 @@
     width: 8px;
 }
 
+#line-car {
+    transition: all 0.5s ease-in-out;
+}
+
 .m3-right {
     flex: 60;
 }
@@ -156,15 +160,19 @@
         transform: translate(30vw, -50vh) rotate(90deg);
     }
     45% {
-        transform: translate(-50%, -50vh) rotate(90deg);
+        transform: translate(-44%, -50vh) rotate(90deg);
     }
     55% {
-        transform: translate(-50%, -50vh) rotate(0deg);
+        transform: translate(-44%, -50vh) rotate(0deg);
     }
     100% {
-        transform: translate(-50%, 0vh) rotate(0deg);
+        transform: translate(-44%, 0vh) rotate(0deg);
     }
 }
+
+@keyframes car-forword {}
+
+@keyframes car-reverse {}
 
 .m3-steps {
     position: relative;
@@ -285,4 +293,12 @@
 
 .circ1-l-right {
     left: -54px;
+}
+
+.up-car {
+    transform: translate(-44%, 0vh) rotate(0deg);
+}
+
+.down-car {
+    transform: translate(-44%, 0vh) rotateX(180deg);
 }

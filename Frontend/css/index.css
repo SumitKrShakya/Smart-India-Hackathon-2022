@@ -61,6 +61,7 @@ body>svg {
 
 .head-main {
     font-size: 3rem;
+    text-align: center;
 }
 
 .tagline {
@@ -313,7 +314,7 @@ footer>svg {
     color: white;
     /* width: ; */
     /* height: 15.5rem; */
-    padding: 80px 100px;
+    padding: 80px 100px 30px 100px;
     background: #0099ff;
     display: flex;
     flex-direction: row;
@@ -321,7 +322,9 @@ footer>svg {
 
 .left_footer_child {
     flex: 1;
-    background-color: rgb(53, 161, 255);
+    text-align: center;
+    padding-right: 250px;
+    background-color: #0099ff;
 }
 
 .right_footer_child {
@@ -331,9 +334,13 @@ footer>svg {
 
 .right_footer_child>div>a {
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin: 5px;
-    padding: 5px;
+    /* padding: 5px; */
     text-decoration: none;
     color: white;
+}
+
+.right_footer_child>div>a:hover {
+    color: rgba(255, 255, 255, 0.7);
 }

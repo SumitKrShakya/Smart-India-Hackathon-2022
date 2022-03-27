@@ -6,10 +6,28 @@ const m3_svg = document.querySelectorAll('.s-svg')
 
 
 const car = document.getElementById('line-car')
+const car_path = document.querySelector('.m3-line')
 const allArrow = document.querySelectorAll('.arrow')
 let stepsArrow = [0, 0, 0, 0, 0, 0, 0]
 let stepsStopper = false;
+let prev_car_position = 0;
 window.onscroll = () => {
+    let curr_car_position = Math.round(car.getBoundingClientRect().top - car_path.getBoundingClientRect().top);
+    // console.log(curr_car_position, prev_car_position)
+    if (curr_car_position > prev_car_position) {
+        // console.log(car.classList.contains('down-car'))
+        // if (car.classList.contains('up-car') == false) {
+        car.classList.add('up-car')
+        car.classList.remove('down-car')
+        console.log("up")
+            // }
+    } else if (curr_car_position < prev_car_position) {
+        car.classList.remove('up-car')
+
+        car.classList.add('down-car')
+        console.log("down")
+    }
+    prev_car_position = curr_car_position
     car_mover_starter();
     if (stepsStopper) {
         return;
@@ -42,6 +60,11 @@ window.onscroll = () => {
     //     tt.classList.add('animat');
     // }
 }
+
+// window.onscroll = () => {
+//     console.log("sdf")
+// }
+
 let car_returner = false
 
 function car_mover_starter() {
