@@ -17,18 +17,18 @@ function tabClicked(tab) {
     } else {
         ourTeam_tab.classList.add('currTabClass');
         aboutUs_tab.classList.remove('currTabClass');
-        let temp = ""
-        for (let i = 0; i < 6; i++) {
-            temp += ourTeam_content
-        }
-        tab_content.innerHTML = temp
+        // let temp = ""
+        // for (let i = 0; i < 6; i++) {
+        //     temp += ourTeam_content
+        // }
+        tab_content.innerHTML = ourTeam_content;
 
 
     }
     currTab = tab
 }
 
-let ourTeam_content = `<div class="member-box">
+let ourTeam_content = `                <div class="member-box">
 <div class="member-photo">
     <img src="../svg/shivam.svg" alt="image">
 </div>
@@ -40,10 +40,108 @@ let ourTeam_content = `<div class="member-box">
     </div>
     <div class="member-descrip">
 
-        <br>Frontend Developer <br> I am 3rd Year Undergrad @NSUT East Campus
+        <!-- <br>Frontend Developer <br> I am 3rd Year Undergrad @NSUT East Campus -->
+        <br><i><b>Frontend Developer</b></i> <br> <i>I am 3rd Year Undergrad @NSUT East Campus</i> 
+
+
+
     </div>
 </div>
-</div>`
+</div>
+<div class="member-box">
+<div class="member-photo">
+    <img src="../svg/sumit.svg" alt="image">
+</div>
+<div class="detail">
+
+    <div class="member-name">
+        <b>Sumit kumar shakya<br>(Team Member)
+            </b>
+    </div>
+    <div class="member-descrip">
+
+        <br><i><b>Full Stack Developer</b></i> <br> <i>I am 3rd Year Undergrad @NSUT East Campus</i> 
+
+    </div>
+</div>
+</div>
+<div class="member-box">
+<div class="member-photo">
+    <img src="../svg/bhanu.svg" alt="image">
+</div>
+<div class="detail">
+
+    <div class="member-name">
+        <b>Bhanu Arora<br>(Team Member)
+            </b>
+    </div>
+    <div class="member-descrip">
+        <!-- <br><br> I am 3rd Year Undergrad @NSUT East Campus -->
+        <br><i><b>Full Stack Developer</b></i> <br> <i>I am 3rd Year Undergrad @NSUT East Campus</i> 
+
+    </div>
+</div>
+</div>
+<div class="member-box">
+<div class="member-photo">
+    <img src="../svg/nandini.svg" alt="image">
+</div>
+<div class="detail">
+
+    <div class="member-name">
+
+        <b>Rajnandani kumari<br>(Team Member)
+            </b>
+    </div>
+    <div class="member-descrip">
+
+
+        <!-- <br><br> I am 3rd Year Undergrad @NSUT East Campus -->
+        <br><i><b>Content Writer</b></i> <br> <i>I am 3rd Year Undergrad @NSUT East Campus</i> 
+    </div>
+</div>
+</div>
+<div class="member-box">
+<div class="member-photo">
+    <img src="../svg/aman.svg" alt="image">
+</div>
+<div class="detail">
+
+    <div class="member-name">
+
+        <b>Aman Singh Rathore<br>(Team Member)
+            </b>
+    </div>
+    <div class="member-descrip">
+
+
+        <!-- <br><br> I am 3rd Year Undergrad @NSUT East Campus -->
+        <br><i><b>AI Developer</b></i> <br> <i>I am 3rd Year Undergrad @NSUT East Campus</i> 
+
+    </div>
+</div>
+</div>
+<div class="member-box">
+<div class="member-photo">
+    <img src="../svg/sukhvinder.svg" alt="image">
+</div>
+<div class="detail">
+
+    <div class="member-name">
+
+        <b>Sukhvinder Satija<br>(Team Member)
+            </b>
+    </div>
+    <div class="member-descrip">
+
+
+        <br><i><b>Backend Developer</b></i> <br> <i>I am 3rd Year Undergrad @NSUT East Campus</i> 
+
+    </div>
+</div>
+</div>
+
+`
 
 let aboutUs_content = `<div class="cntnt">
 We, the students of NSUT EAST CAMPUS, participating in Smart India Hackathon (SIH) 2022.
