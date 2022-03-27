@@ -378,16 +378,16 @@
             <h1>Admin login</h1>
             <form>
                 <div class="form-control">
-                    <input type="email" required />
+                    <input type="email" id="email" required />
                     <label>Email</label>
                 </div>
 
                 <div class="form-control">
-                    <input type="password" required />
+                    <input type="password" id="pass" required />
                     <label>password</label>
                 </div>
 
-                <button class="btn">Login</button>
+                <button class="btn" id="login">Login</button>
                 <p class="text">Forget Password ? <a href="#">click here</a></p>
             </form>
         </div>
@@ -474,6 +474,30 @@
                 )
                 .join("");
         });
+        document.getElementById("login").addEventListener("click", async (event) => {
+          event.preventDefault();
+          let email = document.getElementById("email").value;
+          let pass = document.getElementById("pass").value;
+          let res = await fetch("http://localhost:8080/login",{
+            method : "POST",
+            headers : {
+              "Content-Type":"application/json"
+            },
+            body : JSON.stringify({
+              email : email,
+              password : pass
+            })
+          })
+          if(res.status !== 200 && res.status !== 201){
+            alert("invalid password");
+            return;
+          }
+          let data = await res.json();
+          if(data){
+            localStorage.setItem("token",data.token);
+            window.location.href = "./dashboard.html";
+          }
+        })
     </script>
 </body>
 

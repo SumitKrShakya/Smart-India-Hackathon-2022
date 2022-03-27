@@ -28,7 +28,7 @@ app.use(multer({
 app.use(videoRouter);
 app.use(loginRoutes);
 app.use("/vehicle",vehicleRoutes);
-mongoose.connect("")
+mongoose.connect("mongodb+srv://user_01:BChklZsnyMDnvU0J@cluster0.kpq9o.mongodb.net/sih?retryWrites=true&w=majority")
 .then(() => {
     console.log("connected");
     app.listen(8080);
