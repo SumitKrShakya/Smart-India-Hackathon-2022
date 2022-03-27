@@ -313,4 +313,14 @@ footer>svg {
     /* width: ; */
     height: 15.5rem;
     background: #0099ff;
+    display: flex;
+    flex-direction: row;
+}
+.left_footer_child{
+    flex: 1;
+    background-color: aliceblue;
+}
+.right_footer_child{
+    flex: 1;
+    background-color: blue;
 }

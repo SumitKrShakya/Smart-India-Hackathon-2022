@@ -32,8 +32,8 @@
     width: 100%;
 }
 
-
-/* .m3-step1 {
+/* 
+.m3-step1 {
     background-color: red;
 }
 
@@ -70,6 +70,7 @@
 .s-svg {
     transition: all 0.5s ease-in-out;
     opacity: 0;
+    /* background-color: aqua; */
     /* max-width: 200px; */
 }
 
