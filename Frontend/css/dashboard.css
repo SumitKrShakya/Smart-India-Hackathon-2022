@@ -5,6 +5,14 @@
     font-family: 'Varela Round', sans-serif;
 }
 
+:root {
+    --blue: #ffffff;
+    --white: #ffffff;
+    --border_color: rgb(82, 82, 82);
+    --font_color: rgb(0, 98, 255);
+    --border_radius: 10px;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -21,7 +29,7 @@
 /* Handle */
 
  ::-webkit-scrollbar-thumb {
-    background: rgb(15, 68, 96);
+    background: rgb(0, 98, 255);
     /* border-radius: 10px; */
 }
 
@@ -29,7 +37,7 @@
 /* Handle on hover */
 
  ::-webkit-scrollbar-thumb:hover {
-    background: hsl(201, 82%, 40%);
+    background: #e0e0e0;
 }
 
 body {
@@ -38,34 +46,48 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    background-color: rgb(236, 236, 236);
 }
 
-.img_wave {
+
+/* .img_wave {
     width: 100vw;
     height: 100vh;
     z-index: -1;
+    left: 0px;
+    position: absolute;
+} */
+
+body>svg {
+    z-index: -1;
+    left: 0px;
     position: absolute;
 }
 
 .container {
+    /* display: none; */
     width: 90%;
     height: 90%;
-    background-color: rgba(255, 255, 255, 0.727);
+    /* background-color: rgba(255, 255, 255, 0.727); */
+    background-color: rgb(255, 255, 255);
     backdrop-filter: blur(20px);
     /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    border-radius: 5px;
+    border-radius: var(--border_radius);
     display: flex;
 }
 
 .dash_left {
     flex: 1;
-    border-radius: 5px;
+    /* border-radius: 5px 0px 0px 5px; */
+    border-radius: var(--border_radius) 0px 0px var(--border_radius);
     /* background-color: #02225ccc; */
-    background-color: #0099f0cc;
+    /* background-color: #0099f0cc; */
+    background-color: var(--blue);
     display: flex;
     flex-direction: column;
-    color: white;
+    /* color: white; */
+    color: var(--font_color);
     /* backdrop-filter: blur(20px); */
     /* height: 100%; */
 }
@@ -90,7 +112,8 @@ body {
     justify-content: center;
     align-items: center;
     border-width: 0px 0px 2px 0px;
-    border-color: rgba(0, 0, 0, 0.4);
+    /* border-color: rgba(255, 255, 255, 0.4); */
+    border-color: var(--border_color);
     border-style: solid;
 }
 
@@ -120,13 +143,15 @@ body {
     align-items: center;
     /* justify-content: flex-start; */
     border-width: 2px 0px 0px 0px;
-    border-color: rgba(0, 0, 0, 0.4);
+    /* border-color: rgba(0, 0, 0, 0.4); */
+    border-color: var(--border_color);
     border-style: solid;
 }
 
 .dash_logout:hover {
-    background-color: #ff2929;
-    border-radius: 0px 0px 5px 5px;
+    color: white;
+    background-color: #ff5858;
+    border-radius: 0px 0px 0px 5px;
 }
 
 .dash_middle {
@@ -141,7 +166,8 @@ body {
 
 .camera {
     margin-top: 9px;
-    color: white;
+    /* color: white; */
+    color: var(--font_color);
     text-align: center;
     flex: 4;
     width: 80%;
@@ -169,11 +195,14 @@ body {
 
 .dash_right {
     flex: 1;
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    border-radius: 0px var(--border_radius) var(--border_radius) 0px;
     /* background-color: #035280; */
-    color: white;
+    /* color: white; */
+    color: var(--font_color);
     /* background-color: #0099f0cc; */
-    background-color: #0099f0cc;
+    /* background-color: #0099f0cc; */
+    background-color: var(--blue);
     display: flex;
     flex-direction: column;
     /* background-color: brown; */
@@ -191,7 +220,8 @@ body {
 
 .addBtn {
     cursor: pointer;
-    background-color: #0099f0;
+    /* background-color: #0099f0; */
+    background-color: rgb(229, 229, 229);
     padding: 10px;
     width: 47px;
     height: 40px;
@@ -204,11 +234,12 @@ body {
 
 .record {
     width: 90%;
-    min-height: 30px;
-    padding: 10px 5px;
+    /* min-height: 30px; */
+    padding: 20px 5px;
     /* border-radius: 5px; */
     /* background-color: blue; */
-    border: 2px solid #0000003e;
+    border: 2px solid;
+    border-color: var(--border_color);
     border-width: 0px 0px 1px 0px;
     display: flex;
     justify-content: space-between;
@@ -220,7 +251,8 @@ body {
     padding: 15px 20px;
     /* width: 100%; */
     /* border-color: black; */
-    background-color: #33adf3;
+    /* background-color: #33adf3; */
+    background-color: var(--blue);
     font-weight: bolder;
 }
 
@@ -237,5 +269,10 @@ body {
 .dashboard-div:hover {
     cursor: pointer;
     background-color: #0099f0;
+    color: white;
     /* min-height: 50px; */
+}
+
+.uploadButtonText {
+    fill: var(--font_color);
 }
