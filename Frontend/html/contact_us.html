@@ -130,34 +130,63 @@
             <div class="input-1">
                 <div class="input-div">
                     <label for="email"> Your Email <span>*</span></label>
-                    <input type="email">
+                    <input id="email" type="email">
                 </div>
                 <div class="input-div">
                     <label for="pnone-number"> Your Phone Number <span>*</span></label>
-                    <input type="number">
+                    <input id="phone" type="number">
                 </div>
                 <div class="input-div">
                     <label for="name"> Your Name <span>*</span></label>
-                    <input type="text">
+                    <input id="name" type="text">
                 </div>
                 <div class="input-div">
                     <label for="company-name"> Company Name <span>*</span></label>
-                    <input type="text">
+                    <input id="company" type="text">
                 </div>
             </div>
             <div class="textared-div">
                 <label for="exp">How can we help ? <span>*</span></label>
-                <textarea name="explaination" id="" cols="30" rows="10"></textarea>
+                <textarea id="details" name="explaination" id="" cols="30" rows="10"></textarea>
             </div>
             <div class="submit-div">
-                <button class="submit" type="submit">Submit Message</button>
+                <button id="submitBtn" class="submit" type="submit">Submit Message</button>
             </div>
         </form>
     </div>
     <div class="c1">
         <div class="c2"></div>
     </div>
-
+    <script>
+        document.getElementById("submitBtn").addEventListener("click",async (e) => {
+            e.preventDefault();
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let company = document.getElementById("company").value;
+            let name = document.getElementById("name").value;
+            let details = document.getElementById("details").value;
+            let res = await fetch("http://localhost:8080/sendQuery",{
+                method : "POST",
+                headers : {
+                    "Content-Type":"application/json"
+                },
+                body : JSON.stringify({
+                    phoneNumber : phone,
+                    email : email,
+                    name : name,
+                    companyName : company,
+                    query : details
+                })
+            })
+            if(res.status !== 200 && res.status !== 201){
+                alert("we cannot process your query due to technical issue")
+                return ;
+            }
+            let data = await res.json();
+            console.log(data);
+            alert("our team has recieved your query , We will solve this soon");
+        })
+    </script>
     <script src="/Frontend/js/contact_us.js"></script>
 </body>
 

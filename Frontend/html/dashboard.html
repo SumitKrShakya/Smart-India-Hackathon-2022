@@ -15,7 +15,31 @@
 
 <body>
     <!-- <img src="../svg/dashboard_wave.svg" alt=""> -->
-    <img class="img_wave" src="../images/Untitled.png" alt="">
+    <!-- <img class="img_wave" src="../svg/dashboard-temp.svg" alt=""> -->
+    <!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In  -->
+    <!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In  -->
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="100%" viewBox="0 0 595.3 415.3" style="overflow:visible;enable-background:new 0 0 595.3 415.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+</style>
+<defs>
+</defs>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.6804" y1="410.7018" x2="415.1285" y2="125.4036">
+	<stop  offset="0" style="stop-color:#78CFDE"/>
+	<stop  offset="9.171769e-02" style="stop-color:#6EBDD8"/>
+	<stop  offset="0.2696" style="stop-color:#5EA4CE"/>
+	<stop  offset="0.449" style="stop-color:#5391C7"/>
+	<stop  offset="0.628" style="stop-color:#4B84C1"/>
+	<stop  offset="0.8067" style="stop-color:#457DBF"/>
+	<stop  offset="0.9847" style="stop-color:#447BBE"/>
+</linearGradient>
+<path class="st0" d="M0,0l17.5,2.2c17.4,2.4,52.6,6.5,67,46.6c14.4,40.1,8.7,115,31.7,140.3c23.2,25,75,0.3,108.4,7.5
+	c33.2,7.6,47.9,47.1,81.1,54.7c33.4,7.2,85.2-17.5,116.9-7.3c31.7,10.2,42.6,56.3,59,93.1c16.3,36.7,30.7,52,60.7,65.2
+	c36.8,11.5,19.7,5.9,53.1,13.1c-289.9,0-408.7,0-595.3,0C0,275.4,0,105,0,0z"/>
+</svg>
+
+
 
     <div class="container">
         <div class="dash_left">
@@ -47,11 +71,12 @@
                 <div class="addVideo">
                     <label for="fusk" class="addBtn">
                         <svg width="30" height="37" viewBox="0 0 30 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.57143 27.8571H21.4286V15H30L15 0L0 15H8.57143V27.8571ZM0 32.1428H30V36.4285H0V32.1428Z" fill="black"/>
+                            <path class="uploadButtonText" d="M8.57143 27.8571H21.4286V15H30L15 0L0 15H8.57143V27.8571ZM0 32.1428H30V36.4285H0V32.1428Z" fill="black"/>
                             </svg>
                                                        
                     </label>
                     <input id="fusk" type="file" name="photo" style="display: none;">
+                    <button class="btn" id="upload">Upload</button>
                 </div>
             </div>
         </div>
@@ -139,7 +164,29 @@
             </div>
         </div>
     </div>
-
+    <script>
+        document.getElementById("upload").addEventListener("click",async (e) => {
+            e.preventDefault();
+            let file = document.getElementById("fusk").files[0];
+            console.log(file);
+            if(file){
+                let formdata = new FormData();
+                formdata.append("video",file);
+                formdata.append("startTime",new Date().toISOString());
+                formdata.append("endTime",new Date(new Date().getTime() + 600000).toISOString());
+                let res = await fetch("http://localhost:8080/storeRecording",{
+                    method:"POST",
+                    body : formdata
+                })
+                let data = await res.json();
+                if(res.status !== 200 && res.status !== 201){
+                    alert("some error occurred")
+                    return;
+                }
+                console.log(data);
+            }
+        })
+    </script>
 </body>
 
 </html>

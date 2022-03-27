@@ -18,7 +18,9 @@ const storage = multer.diskStorage({
     },
     filename:(req, file, cb) => {
         let hash = crypto.createHash('md5').update(file.originalname).digest('hex');
-        cb(null,file.originalname + hash);
+        let fileName = file.originalname.split("\\")
+        let ext = fileName[fileName.length - 1];
+        cb(null,(ext + hash) + "." +ext.split(".")[ext.split(".").length - 1]);
     }
 })
 app.use(multer({
@@ -27,8 +29,8 @@ app.use(multer({
 
 app.use(videoRouter);
 app.use(loginRoutes);
-app.use("/vehicle",vehicleRoutes);
-mongoose.connect("mongodb+srv://user_01:BChklZsnyMDnvU0J@cluster0.kpq9o.mongodb.net/sih?retryWrites=true&w=majority")
+app.use(vehicleRoutes);
+mongoose.connect("")
 .then(() => {
     console.log("connected");
     app.listen(8080);
