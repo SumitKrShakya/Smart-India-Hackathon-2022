@@ -29,7 +29,7 @@ app.use(multer({
 
 app.use(videoRouter);
 app.use(loginRoutes);
-app.use("/vehicle",vehicleRoutes);
+app.use(vehicleRoutes);
 mongoose.connect("")
 .then(() => {
     console.log("connected");
