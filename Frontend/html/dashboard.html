@@ -76,6 +76,7 @@
                                                        
                     </label>
                     <input id="fusk" type="file" name="photo" style="display: none;">
+                    <button class="btn" id="upload">Upload</button>
                 </div>
             </div>
         </div>
@@ -163,7 +164,29 @@
             </div>
         </div>
     </div>
-
+    <script>
+        document.getElementById("upload").addEventListener("click",async (e) => {
+            e.preventDefault();
+            let file = document.getElementById("fusk").files[0];
+            console.log(file);
+            if(file){
+                let formdata = new FormData();
+                formdata.append("video",file);
+                formdata.append("startTime",new Date().toISOString());
+                formdata.append("endTime",new Date(new Date().getTime() + 600000).toISOString());
+                let res = await fetch("http://localhost:8080/storeRecording",{
+                    method:"POST",
+                    body : formdata
+                })
+                let data = await res.json();
+                if(res.status !== 200 && res.status !== 201){
+                    alert("some error occurred")
+                    return;
+                }
+                console.log(data);
+            }
+        })
+    </script>
 </body>
 
 </html>
