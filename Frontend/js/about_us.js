@@ -46,6 +46,11 @@ let ourTeam_content = `<div class="member-box">
 </div>`
 
 let aboutUs_content = `<div class="cntnt">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+We, the students of NSUT EAST CAMPUS, participating in Smart India Hackathon (SIH) 2022.
+Out of several problem statements provided by SIH 2022 we have chosen ‘‘Moving vehicle registration plate detection’’ given under Coal India Limited.
+The objective of our problem statement is to create an anti-theft auto security system that can extract registration number from number plate of moving vehicle. And can capture and transfer data to cloud, which can be available for further analysis of theft or proof reading.
+Our solution contains four main processes: object detection, number plate extraction, character detection and character recognition and to do so we are using ML and OCR technology. 
+After character recognition we will compare it with data provided in database of registered vehicles.
+If vehicle is not registered then our program will send alert message to the admin via email.
+
 </div>`
