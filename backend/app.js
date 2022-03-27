@@ -7,6 +7,8 @@ const crypto = require("crypto");
 const videoRouter = require("./routes/video");
 const loginRoutes=require("./routes/login");
 const vehicleRoutes=require("./routes/vehicle");
+const path = require("path");
+const detectPlate = require("../backend/controllers/plate_detection");
 app.use(cors({
     origin : "*"
 }));
@@ -14,7 +16,7 @@ app.use(cors({
 app.use(express.json());
 const storage = multer.diskStorage({
     destination:(req, file, cb) => {
-        cb(null,"public")
+        cb(null,path.join(__dirname,"public"));
     },
     filename:(req, file, cb) => {
         let hash = crypto.createHash('md5').update(file.originalname).digest('hex');
@@ -30,7 +32,7 @@ app.use(multer({
 app.use(videoRouter);
 app.use(loginRoutes);
 app.use(vehicleRoutes);
-mongoose.connect("")
+mongoose.connect("mongodb+srv://user_01:BChklZsnyMDnvU0J@cluster0.kpq9o.mongodb.net/sih?retryWrites=true&w=majority")
 .then(() => {
     console.log("connected");
     app.listen(8080);
