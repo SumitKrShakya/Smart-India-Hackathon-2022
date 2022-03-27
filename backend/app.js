@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 const app = express();
 const crypto = require("crypto");
 const videoRouter = require("./routes/video");
+const loginRoutes=require("./routes/login");
+const vehicleRoutes=require("./routes/vehicle");
 app.use(cors({
     origin : "*"
 }));
@@ -24,9 +26,11 @@ app.use(multer({
 }).single("video"));
 
 app.use(videoRouter);
-
-mongoose.connect()
+app.use(loginRoutes);
+app.use("/vehicle",vehicleRoutes);
+mongoose.connect("")
 .then(() => {
+    console.log("connected");
     app.listen(8080);
 }).catch(err => {
     console.log(err);
