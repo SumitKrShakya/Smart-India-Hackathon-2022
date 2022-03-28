@@ -1669,7 +1669,8 @@
                     <img class="img-l" src="./Frontend/images/right-arrow.png" alt="">
                 </div>
                 <div data-stepnumber="3" class="m3-s3-content s-content" style="font-size:2rem;color: #0099f0;">
-                    CCTV camera capturing the vehicles and directly send video footage to server.
+                    <!-- CCTV camera capturing the vehicles and directly send video footage to server. -->
+                    The video captured by the camera will send to the server for further processing
                 </div>
             </div>
             <div class="m3-step4 all-flex m3-steps">
@@ -1689,7 +1690,8 @@
                     <img class="img-l" src="./Frontend/images/right-arrow.png" alt="">
                 </div>
                 <div data-stepnumber="5" class="m3-s5-content s-content" style="font-size:2rem;color: #0099f0;">
-                    Deep Learning model output send to the backend then OCR (Optical Character Recognition) extracts the text from the Number plate image and then matches with the Database of Organization
+                    <!-- Deep Learning model output send to the backend then OCR (Optical Character Recognition) extracts the text from the Number plate image and then matches with the Database of Organization -->
+                    Model extracts the imgage of number plate from the video which is then passed as parameter to pytesseract which extracts the registeration number from the image and return a string for further processing to be done.
                 </div>
             </div>
             <div class="m3-step6 all-flex m3-steps">
@@ -1710,7 +1712,7 @@
                     <img class="img-l" src="./Frontend/images/right-arrow.png" alt="">
                 </div>
                 <div data-stepnumber="7" class="m3-s7-content s-content" style="font-size:2rem;color: #0099f0;">
-                    If the vehicle found unregister with the database then Immediately Alert the admin via mail
+                    If the vehicle found unregister with the database then Immediately Alert the admin via mail.
                 </div>
             </div>
         </div>
@@ -1737,7 +1739,8 @@
                     <img class="img-r" src="./Frontend/images/right-arrow.png" alt="">
                 </div>
                 <div data-stepnumber="2" class="m3-s2-content s-content" style="font-size:2rem;color: #0099f0;">
-                    On Dashboard, Admin can see the CCTV camera footage and updated Records of the vehicles entering in his premises
+                    <!-- On Dashboard, Admin can see the CCTV camera footage and updated Records of the vehicles entering in his premises -->
+                    On Dashboard , Admin can moniter each and every vehicle entering or leaving the premises in the record panel.
                 </div>
             </div>
             <div class="m3-step3 all-flex m3-steps">
@@ -1778,7 +1781,8 @@
                     <img class="img-r" src="./Frontend/images/right-arrow.png" alt="">
                 </div>
                 <div data-stepnumber="6" class="m3-s6-content s-content" style="font-size:2rem;color: #0099f0;">
-                    if vehicle number plate is registerd with the database then it let the vehicle pass or just show the details on the admin dashboard.
+                    <!-- if vehicle number plate is registerd with the database then it let the vehicle pass or just show the details on the admin dashboard. -->
+                    Now returned string is searched in the database.If found then message stating "Vehicle verified" will be displayed on the Frontend.
                 </div>
             </div>
             <div class="m3-step7 all-flex m3-steps">

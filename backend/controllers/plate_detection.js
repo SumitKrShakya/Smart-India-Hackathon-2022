@@ -19,9 +19,9 @@ const detectPlate = async (req,res,next) => {
         console.log(data.toString());
     })
 }
-detectPlate({
-    body : {
-        recordingId : "6240ae6f0ea7245671a0f762"
-    }
-})
+// detectPlate({
+//     body : {
+//         recordingId : "6240ae6f0ea7245671a0f762"
+//     }
+// })
 module.exports = detectPlate;
